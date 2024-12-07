@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Civiliazation - A sci-fi novel about Mars colonization (and AI) written with Vanilla Web Components">
+    <title>Civilaization</title>
+    <script defer src="https://flagmeister.github.io/elements.flagmeister.min.js"></script>
+    <script>
+        document.head.append(script = Object.assign(document.createElement('script'), {
+            src: `book-elements${(location.href.includes('github')) ? ".min" : ""}.js`,//?prefix=book&chapterprefix=chapter`,
+            onload: () => console.log(`%c book-elements loaded `, "background:lightblue", script.src),
+        }));
+    </script>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        toast-message {
+            font: 20px arial;
+            --toast-message-background: steelblue;
+            --toast-message-color: beige;
+        }
+
+        book-reader {
+            --titlebackground: steelblue;
+        }
+
+        book-chapter img[src*="chapter"] {
+            max-width: 500px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <template id="CHAPTER-NUMBER">
+        <!-- todo? -->
+    </template>
+
+    <!-- 
+        book= takes precendence over src=
+    -->
+    <book-reader todo="all aria stuff" book="civilaization" src="https://hexedland.com/pod21"
+        todo_chapters="/chapters/chapter-NR-LANG.md"></book-reader>
+
+</body>
+
+</html>
