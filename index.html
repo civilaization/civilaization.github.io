@@ -26,13 +26,17 @@
         }
 
         book-reader {
-            --titlebackground: steelblue;
+            /* --titlebackground: steelblue; */
         }
 
         book-chapter img[src*="chapter"] {
             max-width: 500px;
             margin: 0 auto;
             display: block;
+        }
+
+        book-reader::part(language-select) {
+            border: none;
         }
     </style>
 </head>
@@ -45,8 +49,7 @@
     <!-- 
         book= takes precendence over src=
     -->
-    <book-reader todo="all aria stuff" book="civilaization" src="https://hexedland.com/pod21"
-        todo_chapters="/chapters/chapter-NR-LANG.md"></book-reader>
+    <book-reader book="civilaization" src="https://hexedland.com/pod21/book/civilaization"></book-reader>
 
 </body>
 
