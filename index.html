@@ -16,7 +16,6 @@
     </script>
     <style>
         body {
-            overflow: hidden;
         }
 
         toast-message {
@@ -51,6 +50,36 @@
     -->
     <book-reader book="civilaization" src="https://hexedland.com/pod21/book/civilaization"></book-reader>
 
+    <section hidden>
+        <h2>P1</h2>
+        Paragraph1
+        <div>P2</div>
+        <div>P3</div>
+        Paragraph4
+    </section>
+    <script>
+        function html2chapters() {
+            const section = document.querySelector('section');
+            const fragment = document.createDocumentFragment();
+            section.querySelectorAll('h2').forEach(h2 => {
+                const bookChapter = document.createElement('book-chapter');
+                bookChapter.appendChild(h2.cloneNode(true));
+                let nextSibling = h2.nextSibling;
+                while (nextSibling && nextSibling.tagName !== 'H2') {
+                    const toAppend = nextSibling;
+                    nextSibling = nextSibling.nextSibling;
+                    bookChapter.appendChild(toAppend);
+                }
+                console.log(bookChapter.outerHTML);
+                fragment.appendChild(bookChapter);
+            });
+            section.innerHTML = '';
+            setTimeout(() => {
+                console.error("adding index chapter");
+                section.appendChild(fragment);
+            }, 2000);
+        }
+    </script>
 </body>
 
 </html>
