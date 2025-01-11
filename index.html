@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Civiliazation - A sci-fi novel about Mars colonization (and AI) written with Vanilla Web Components">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Civilaization</title>
     <script defer src="https://flagmeister.github.io/elements.flagmeister.min.js"></script>
     <script>
         document.head.append(script = Object.assign(document.createElement('script'), {
-            src: `book-elements${(location.href.includes('github')) ? ".min" : ""}.js`,//?prefix=book&chapterprefix=chapter`,
+            src: `book-elements${(location.href.includes('github')) ? ".min" : ""}.js?prefix=course&chapterprefix=lesson`, 
             onload: () => console.log(`%c book-elements loaded `, "background:lightblue", script.src),
         }));
     </script>
@@ -54,7 +54,8 @@
     <!-- 
         book= takes precendence over src=
     -->
-    <book-reader book="civilaization" src="https://hexedland.com/pod21/book/civilaization"></book-reader>
+    <!-- <book-reader book="civilaization" src="https://hexedland.com/pod21/book/civilaization"></book-reader> -->
+    <book-reader book="civilaization"></book-reader>
 
     <section hidden>
         <h2>P1</h2>
