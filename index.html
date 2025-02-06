@@ -17,8 +17,8 @@
     <script defer src="https://flagmeister.github.io/elements.flagmeister.min.js"></script>
     <script>
         document.head.append(script = Object.assign(document.createElement('script'), {
-            src: `book-elements${(location.href.includes('github')) ? ".min" : ""}.js?prefix=course&chapterprefix=lesson`, 
-            onload: () => console.log(`%c book-elements loaded `, "background:lightblue", script.src),
+            src: `book-elements${(location.href.includes('github')) ? ".min" : ""}.js`,//`?prefix=course&chapterprefix=lesson`, 
+            onload: () => console.log(`%c <book-elements> loaded `, "background:gold", script.src),
         }));
     </script>
     <style>
@@ -87,7 +87,7 @@
             }, 2000);
         }
     </script>
-    
+
 </body>
 
 </html>
